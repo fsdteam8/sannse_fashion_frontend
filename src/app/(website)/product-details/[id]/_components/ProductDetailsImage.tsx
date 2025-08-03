@@ -29,7 +29,7 @@ const ProductDetailsImage: React.FC<ProductDetailsImageProps> = ({
   const productData = {
     id: Array.isArray(productId) ? productId[0] : productId,
     title: "Lorem ipsum dolor sit amet, consectetur efficitur.",
-    price: 254,
+    price: 54,
     images: [
       {
         id: 0,

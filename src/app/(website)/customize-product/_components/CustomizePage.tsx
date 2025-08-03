@@ -8,34 +8,46 @@ const customizeSections = [
   {
     imageUrl: cusotmimage,
     altText: "Fashion Style 1",
-    title: "Lorem ipsum dolor sit amet,",
+    title: "Customize the Coat however you want.",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin efficitur diam non sodales eleifend.",
-    buttonText: "Know more",
+    buttonText: "Customize Coat",
+    hrf: "/suits"
   },
   {
     imageUrl: cusotmimage,
     altText: "Fashion Style 2",
-    title: "Vestibulum ante ipsum primis in faucibus",
+    title: "Customize the Shirt however you want.",
     description:
       "Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.",
-    buttonText: "Know more",
+    buttonText: "Customize Shirt",
+    hrf: "/shirts"
   },
   {
     imageUrl: cusotmimage,
     altText: "Fashion Style 3",
-    title: "Mauris blandit aliquet elit",
+    title: "Customize the Jacket however you want.",
     description:
       "Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.",
-    buttonText: "Know more",
+    buttonText: "Customize Jacket",
+    hrf: "/jackets "
   },
   {
     imageUrl: cusotmimage,
     altText: "Fashion Style 4",
-    title: "Curabitur aliquet quam id dui posuere",
+    title: "Customize the Pants however you want.",
     description: "Vivamus suscipit tortor eget felis porttitor volutpat.",
-    buttonText: "Know more",
+    buttonText: "Customize Pants",
+    hrf: ""
   },
+  {
+    imageUrl: cusotmimage,
+    altText: "Fashion Style 4",
+    title: "Customize the Suit however you want.",
+    description: "Vivamus suscipit tortor eget felis porttitor volutpat.",
+    buttonText: "Customize Suit ",
+    hrf: ""
+  }
 ];
 
 function CustomizePage() {

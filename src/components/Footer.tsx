@@ -133,7 +133,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-
       {/* Copyright */}
       <div className="container mx-auto mt-8 border-t border-gray-700 py-4 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500 gap-2 sm:gap-0">
         <p>© 2025 Drip Swag All rights reserved.</p>

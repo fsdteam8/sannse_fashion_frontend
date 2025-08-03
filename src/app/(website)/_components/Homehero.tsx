@@ -11,6 +11,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 
 interface SlideData {
   id: number;
@@ -39,8 +40,8 @@ const slides: SlideData[] = [
     title: "Discover Premium Quality\nFashion Collection",
     subtitle:
       "Explore our curated selection of premium clothing and accessories. Find pieces that express your unique style.",
-    primaryButton: "Shop Now",
-    secondaryButton: "View Collection",
+    primaryButton: "Customize Product",
+    secondaryButton: "Readymade Product",
   },
   {
     id: 3,
@@ -49,8 +50,8 @@ const slides: SlideData[] = [
     title: "Tailored to Perfection\nJust for You",
     subtitle:
       "Experience custom-tailored garments designed for your measurements. Every detail meets your expectations.",
-    primaryButton: "Get Measured",
-    secondaryButton: "Learn More",
+    primaryButton: "Customize Product",
+    secondaryButton: "Readymade Product",
   },
 ];
 
@@ -102,15 +103,23 @@ export default function Homehero() {
                       {slide.subtitle}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                      <Button className="bg-red-600 h-[51px] w-[230px] hover:bg-red-700 text-lg font-semibold transition-transform hover:scale-105">
-                        {slide.primaryButton}
-                      </Button>
-                      <Button
-                        variant="outline"
-                        className="border-2 h-[51px] border-red-600 w-[230px] text-red-600 hover:bg-red-600 hover:text-white text-lg font-semibold transition-transform hover:scale-105"
-                      >
-                        {slide.secondaryButton}
-                      </Button>
+                      <div>
+                        <Link href="/customize-product">
+                          <Button className="bg-red-600 h-[51px] w-[230px] hover:bg-red-700 text-lg font-semibold transition-transform hover:scale-105">
+                            {slide.primaryButton}
+                          </Button>
+                        </Link>
+                      </div>
+                      <div>
+                        <Link href="/products">
+                          <Button
+                            variant="outline"
+                            className="border-2 h-[51px] border-red-600 w-[230px] text-red-600 hover:bg-red-600 hover:text-white text-lg font-semibold transition-transform hover:scale-105"
+                          >
+                            {slide.secondaryButton}
+                          </Button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>

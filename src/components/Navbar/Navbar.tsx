@@ -1,7 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { ChevronDown, ShoppingCart, User, Menu } from "lucide-react";
+import {
+  ChevronDown,
+  ShoppingCart,
+  User,
+  Menu,
+  CircleUser,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -155,27 +161,45 @@ export default function Navbar() {
                       <ChevronDown className="h-5 w-5" />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-48 bg-black/95 backdrop-blur-md border-gray-700 text-white">
-                    <DropdownMenuGroup>
-                      <DropdownMenuItem className="hover:bg-gray-800 focus:bg-gray-800">
-                        <Link href="/products/category1" className="w-full">
-                          Category 1
+                  <DropdownMenuContent className="w-44 bg-[#EF1A26] backdrop-blur-md border-gray-700 text-white">
+                    <DropdownMenuGroup className="space-y-1">
+                      <DropdownMenuItem asChild>
+                        <Link
+                          href="/products"
+                          className="w-full px-2 py-1.5 hover:bg-gray-800 rounded-sm"
+                        >
+                          Products
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-gray-800 focus:bg-gray-800">
-                        <Link href="/products/category2" className="w-full">
-                          Category 2
+                      <DropdownMenuItem asChild>
+                        <Link
+                          href="/customize-product"
+                          className="w-full px-2 py-1.5 hover:bg-gray-800 rounded-sm"
+                        >
+                          Customize Product
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuItem className="hover:bg-gray-800 focus:bg-gray-800">
-                        <Link href="/products/category3" className="w-full">
-                          Category 3
+                      <DropdownMenuItem asChild>
+                        <Link
+                          href="/products"
+                          className="w-full px-2 py-1.5 hover:bg-gray-800 rounded-sm"
+                        >
+                          Readymade Product
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link
+                          href="/other-product"
+                          className="w-full px-2 py-1.5 hover:bg-gray-800 rounded-sm"
+                        >
+                          Others Product
                         </Link>
                       </DropdownMenuItem>
                     </DropdownMenuGroup>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>
+
               <Link
                 href="/faq"
                 className={`text-white hover:text-gray-300 px-3 py-2 text-sm font-medium transition-colors min-w-[60px] ${
@@ -214,13 +238,10 @@ export default function Navbar() {
             {isLoggedIn ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    className="text-white hover:bg-gray-800"
-                  >
-                    <User className="h-6 w-6" />
-                  </Button>
+                  <div className="text-white hover:bg-gray-800">
+                    {/* <User className="h-6 w-6" /> */}
+                    <CircleUser className="h-7 w-7" />
+                  </div>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-48 bg-black/95 backdrop-blur-md border-gray-700 text-white">
                   <DropdownMenuGroup>
